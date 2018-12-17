@@ -36,7 +36,11 @@ WORKDIR $HOME/incubator-superset
 COPY ./ ./
 
 RUN pip install --upgrade setuptools pip
-RUN pip install -e . && pip install -r requirements-dev.txt
+#RUN pip install -e . && pip install -r requirements-dev.txt
+RUN pip install -e . --no-cache-dir  && pip install -r requirements-dev.txt --no-cache-dir 
+#add this too
+RUN pip install click==6.7
+RUN pip install psycopg2-binary
 
 ENV PATH=/home/work/incubator-superset/superset/bin:$PATH \
     PYTHONPATH=./superset/:$PYTHONPATH

@@ -57,7 +57,7 @@ setup(
         'boto3==1.4.7',
         'botocore>=1.7.0, <1.8.0',
         'celery>=4.2.0',
-        'colorama',
+        'colorama==0.3.9',
         'contextlib2',
         'cryptography',
         'flask<1.0.0',
